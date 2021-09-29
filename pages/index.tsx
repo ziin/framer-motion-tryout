@@ -1,9 +1,10 @@
+import { motion } from 'framer-motion'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { styled } from '../styles'
 
-const Main = styled('main', {
+const Main = styled(motion.main, {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -20,9 +21,17 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Main>
+      <Main
+        exit={{ opacity: 0, transition: { duration: 0.5 } }}
+        initial="initial"
+        animate="animate"
+      >
         <h1>Examples</h1>
         <Link href="/scroll-example">Scroll Example</Link>
+        <Link href="/playground">Playground</Link>
+        <Link href="/checkbox">Checkbox</Link>
+        <Link href="/checkbox-pure">Checkbox Pure</Link>
+        <Link href="/page-transition">Page Transition</Link>
       </Main>
     </>
   )
