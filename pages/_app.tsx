@@ -4,7 +4,9 @@ import { globalStyles } from '../styles'
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
-    <AnimatePresence exitBeforeEnter>
+    // initial: false
+    // Don't repeat animation when refreshing the page, only when route change
+    <AnimatePresence exitBeforeEnter initial={false}>
       {globalStyles()}
       <Component {...pageProps} key={router.route} />
     </AnimatePresence>
