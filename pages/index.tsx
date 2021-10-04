@@ -32,6 +32,7 @@ const Home: NextPage = () => {
         <Link href="/checkbox">Checkbox</Link>
         <Link href="/checkbox-pure">Checkbox Pure</Link>
         <Link href="/page-transition">Page Transition</Link>
+        <Link href="/todos">Todos</Link>
       </Main>
     </>
   )
